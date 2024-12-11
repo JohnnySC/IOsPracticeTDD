@@ -14,7 +14,7 @@ final class Task007ViewmModelTest: XCTestCase {
     private var viewModel: SimpleViewModel!
     
     override func setUpWithError() throws {
-        repository = FakeSimpleRepository()
+        repository = FakeSimpleRepositoryImpl()
         viewModel = SimpleViewModel(repository: repository)
     }
     
@@ -56,13 +56,19 @@ final class Task007ViewmModelTest: XCTestCase {
     }
 }
 
-private class FakeSimpleRepository : SimpleRepository {
+private protocol FakeSimpleRepository : SimpleRepository {
+    
+    func expectError()
+}
+
+private class FakeSimpleRepositoryImpl : FakeSimpleRepository {
     
     private var shouldThrowError = false
     
     func expectError() {
         shouldThrowError = true
     }
+    
     func loadData() async throws -> String {
         if shouldThrowError {
             throw SimpleError()
