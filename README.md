@@ -18,4 +18,4 @@ task005-closure How to test closure in Swift https://youtu.be/C3B56k40dzQ
 
 task006-int-validations-by-pattern Decorator pattern and inheritance in Swift https://youtu.be/oco9h_ivaOg
 
-
+task007-viewmodel Simple MVVM testing ViewModel with repository https://youtu.be/IfVxilVZBmI
