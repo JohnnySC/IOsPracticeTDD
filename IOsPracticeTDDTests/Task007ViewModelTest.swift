@@ -8,7 +8,7 @@
 import XCTest
 @testable import IOsPracticeTDD
 
-final class Task007ViewmModelTest: XCTestCase {
+final class Task007ViewModelTest: XCTestCase {
 
     private var repository: FakeSimpleRepository!
     private var viewModel: SimpleViewModel!
